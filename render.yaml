@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: extra-work-lefa-services
+    runtime: python
+    plan: free
+    buildCommand: python -m py_compile server.py start_render.py
+    startCommand: python start_render.py
+    healthCheckPath: /health
